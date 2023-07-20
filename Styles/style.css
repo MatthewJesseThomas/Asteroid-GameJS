@@ -1,0 +1,14 @@
+*,
+*::before,
+*::after{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+overflow: hidden;
+}
+:root{
+--color-asteroid: #524a44;
+--color-laser: #f70d1a;
+--color-space-background: #00FF00;
+--color-spaceship: #274b81;
+}
