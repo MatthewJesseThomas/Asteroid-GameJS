@@ -10,23 +10,32 @@
 :root {
     --color-accent: #524a44;
     --color-hove-underline: #f70d1a;
-    --color-background: color-mix(in lch, lightblue 80%, purple);
-    --color-text: #274b81;
+    --color-background: color-mix(in lch, grey 80%, darkcyan);
+    --color-text: #fff;
+    /* Lighten the text color to make it more visible */
 }
 
 body {
-    background-color: var(--color-background);
-}
-
-/* Custom styles */
-body {
+    background-color: #f0f0f0;
+    /* Light gray background */
     padding-top: 80px;
-    /* Make space for the fixed-top navbar */
+    background-image: url('https://i.postimg.cc/HnSbVyKN/Background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    /* Set the body to relative position */
+}
+.logo-icon{
+    width: 5rem;
+    height: 5rem;
+    border-radius: 1rem;
 }
 
 h1 {
     text-align: center;
     margin-top: 40px;
+    color: var(--color-text);
+    /* Use the light text color for h1 */
 }
 
 section {
@@ -43,6 +52,22 @@ section {
     width: 100%;
     max-height: 300px;
     margin-bottom: 20px;
+    border-radius: 10px;
+    /* Add some border radius for a modern look */
+    filter: brightness(70%) contrast(120%) blur(1px);
+    /* Apply cool image filters */
+    transition: filter 0.3s ease, transform 0.2s ease;
+    /* Add a smooth transition effect */
+    transform: translateY(0);
+    /* Initial position for animation */
+}
+
+.image-section-one img:hover,
+.image-section-two img:hover {
+    filter: brightness(100%) contrast(100%) blur(0);
+    /* Remove filters on hover */
+    transform: translateY(-5px);
+    /* Add animation to move the image up slightly on hover */
 }
 
 .navbar-brand {
@@ -51,6 +76,12 @@ section {
 
 .navbar-toggler-icon {
     background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(0, 0, 0, 0.5)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+    /* Animation to rotate the toggle icon on hover */
+    transition: transform 0.2s ease;
+}
+
+.navbar-toggler-icon:hover {
+    transform: rotate(180deg);
 }
 
 .nav-link {
@@ -82,6 +113,8 @@ section {
     background-color: #333;
     color: #fff;
     padding: 30px 0;
+    opacity: 0;
+    /* Initial opacity for animation */
 }
 
 .game-footer h3 {
@@ -128,4 +161,51 @@ section {
 
 .social-icons .instagram {
     background-color: #e4405f;
+}
+
+/* Enhanced background overlay */
+body::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    /* Semi-transparent black overlay with reduced opacity */
+}
+
+/* Add animations for image sections */
+.image-section-one img,
+.image-section-two img {
+    /* ... (Existing styles remain unchanged) ... */
+    transform: translateY(0);
+    /* Initial position for animation */
+}
+
+.image-section-one img:hover,
+.image-section-two img:hover {
+    filter: brightness(100%) contrast(100%) blur(0);
+    /* Add animation to move the image up slightly on hover */
+    transform: translateY(-5px);
+}
+
+/* Add animation for footer */
+.game-footer {
+    /* ... (Existing styles remain unchanged) ... */
+    opacity: 0;
+    /* Initial opacity for animation */
+}
+
+/* Animation to fade in the footer when it comes into view */
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+.game-footer {
+    animation: fadeIn 1s ease forwards;
+    /* Apply animation on load */
 }
