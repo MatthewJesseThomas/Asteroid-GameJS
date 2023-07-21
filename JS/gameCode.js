@@ -133,8 +133,12 @@ function animate() {
         player.velocity.y *= FRICTION;
     }
 
-    if (keys.ArrowRight.pressed) player.rotation += ROTATIONAL_SPEED;
-    else if (keys.ArrowLeft.pressed) player.rotation -= ROTATIONAL_SPEED;
+    if (keys.ArrowRight.pressed) {
+        player.rotation += ROTATIONAL_SPEED;  
+    } 
+    else if (keys.ArrowLeft.pressed) {
+        player.rotation -= ROTATIONAL_SPEED;
+    }
 }
 
 animate();
