@@ -1,23 +1,131 @@
+/* Reset styles */
 *,
 *::before,
-*::after{
-margin: 0;
-padding: 0;
-box-sizing: border-box;
-overflow: hidden;
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
-:root{
---color-accent: #524a44;
---color-hove-underline: #f70d1a;
---color-background: color-mix(in lch, lightblue 80%, purple);
---color-text: #274b81;
+
+:root {
+    --color-accent: #524a44;
+    --color-hove-underline: #f70d1a;
+    --color-background: color-mix(in lch, lightblue 80%, purple);
+    --color-text: #274b81;
 }
-body{
-    background-color: var(--color-background) !important;
+
+body {
+    background-color: var(--color-background);
 }
-h1{
-    margin: auto;
+
+/* Custom styles */
+body {
+    padding-top: 80px;
+    /* Make space for the fixed-top navbar */
+}
+
+h1 {
     text-align: center;
-    margin-top: 3rem !important;
-    color: lightgreen !important;
+    margin-top: 40px;
+}
+
+section {
+    padding: 40px 0;
+}
+
+.image-section-one,
+.image-section-two {
+    margin: 40px 0;
+}
+
+.image-section-one img,
+.image-section-two img {
+    width: 100%;
+    max-height: 300px;
+    margin-bottom: 20px;
+}
+
+.navbar-brand {
+    font-size: 1.2rem;
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(0, 0, 0, 0.5)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+.nav-link {
+    color: #000;
+}
+
+.nav-link:hover,
+.nav-link:focus {
+    color: #007bff;
+}
+
+.btn-outline-success {
+    color: #28a745;
+    border-color: #28a745;
+}
+
+.btn-outline-success:hover {
+    background-color: #28a745;
+    color: #fff;
+}
+
+.btn-outline-success:focus,
+.btn-outline-success.focus {
+    box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.5);
+}
+
+/* Footer styles */
+.game-footer {
+    background-color: #333;
+    color: #fff;
+    padding: 30px 0;
+}
+
+.game-footer h3 {
+    color: #fff;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.game-footer p {
+    color: #ccc;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.social-icons {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.social-icons li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.social-icons a {
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+    font-size: 18px;
+    border-radius: 50%;
+    color: #fff;
+}
+
+.social-icons .facebook {
+    background-color: #3b5998;
+}
+
+.social-icons .twitter {
+    background-color: #1da1f2;
+}
+
+.social-icons .instagram {
+    background-color: #e4405f;
 }
