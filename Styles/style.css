@@ -12,3 +12,9 @@ overflow: hidden;
 --color-space-background: #00FF00;
 --color-spaceship: #274b81;
 }
+/* h1{
+    margin: auto;
+    text-align: center;
+    margin-top: 3rem !important;
+    color: lightgreen !important;
+} */
