@@ -7,14 +7,17 @@ box-sizing: border-box;
 overflow: hidden;
 }
 :root{
---color-asteroid: #524a44;
---color-laser: #f70d1a;
---color-space-background: #00FF00;
---color-spaceship: #274b81;
+--color-accent: #524a44;
+--color-hove-underline: #f70d1a;
+--color-background: color-mix(in lch, lightblue 80%, purple);
+--color-text: #274b81;
 }
-/* h1{
+body{
+    background-color: var(--color-background) !important;
+}
+h1{
     margin: auto;
     text-align: center;
     margin-top: 3rem !important;
     color: lightgreen !important;
-} */
+}
