@@ -1,11 +1,68 @@
-/* Reset styles */
-*,
-*::before,
-*::after {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-body{
-    overflow: hidden;
-}
+ /* Reset styles */
+ *,
+ *::before,
+ *::after {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+ }
+
+ body {
+     overflow: hidden;
+ }
+
+ /* Set the canvas to fill the available width and height */
+ canvas {
+     display: block;
+     width: 100vw;
+     /* Set canvas width to 100% of the viewport width */
+     height: 80vh;
+     /* Add some padding around the canvas */
+     background-color: black;
+     /* Optional background color for the canvas */
+ }
+
+ /* Styling for the container div */
+ #highscoreSection {
+     position: relative;
+     width: 100vw;
+     /* Set highscore section width to 100% of the viewport width */
+     max-width: 800px;
+     margin: 10px auto;
+     /* Add some margin to center the highscore section */
+     display: flex;
+     flex-direction: column;
+     align-items: flex-start;
+     background-color: rgba(255, 255, 255, 0.8);
+     /* Semi-transparent background */
+     padding: 10px;
+     border-radius: 5px;
+ }
+
+ /* Style the highscore text */
+ #highscoreSection h2 {
+     font-size: 18px;
+     margin-bottom: 5px;
+ }
+
+ /* Style the reset button */
+ #highscoreSection button {
+     padding: 5px 10px;
+     font-size: 14px;
+     border: none;
+     background-color: #007bff;
+     color: #fff;
+     border-radius: 3px;
+     cursor: pointer;
+ }
+
+ /* Apply responsive styles for smaller screens */
+ @media (max-width: 768px) {
+     #highscoreSection {
+         top: 50%;
+         /* Center the highscore section vertically on smaller screens */
+         left: 50%;
+         /* Center the highscore section horizontally on smaller screens */
+         transform: translate(-50%, -50%);
+     }
+ }
